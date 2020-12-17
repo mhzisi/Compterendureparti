@@ -7,7 +7,7 @@ public class Serveur {
 		ServerSocket s = new ServerSocket(port);
 		System.out.println("En attente de connexion");
 		Socket socClient = s.accept(); 
-		System.out.println("Connexion établie");
+		System.out.println("Connexion Ã©tablie");
 		
 		BufferedReader entreeServeur = new BufferedReader(new InputStreamReader(socClient.getInputStream())
 		);
@@ -19,7 +19,7 @@ public class Serveur {
 		try{
 		nombre=Integer.parseInt(str);
 		}catch (Exception e){
-		System.out.println("L'entrée du clavier n'est pas un entier");
+		System.out.println("L'entrÃ©e du clavier n'est pas un entier");
 		}
 		for(int i=2;i<=nombre;i++){
 			if(estPremier(i))
@@ -36,11 +36,11 @@ public class Serveur {
 
 		static boolean estPremier(int n)
 		{
-		boolean res; // Result of the test
+		boolean res;
 		res = true;
 		int i=2;
 		while(i<=n/2 && res==true){
-		if (n%2 == 0)
+		if (n%i == 0)
 		res = false;
 		i++;
 		}
